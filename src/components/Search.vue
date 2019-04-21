@@ -1,6 +1,6 @@
 <template>
   <aside class="search flex items-center content-between">
-    <em class="title">首页</em>
+    <em class="title">发现</em>
     <input type="text" class="input flex-a" />
     <button class="icon"></button>
   </aside>

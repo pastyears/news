@@ -2,8 +2,7 @@
 <footer class="footer flex items-center content-around">
   <div class="home">
     <router-link
-      to="/"
-      exact
+      to="/home"
       class="link flex column">
       <i class="icon"></i>
       <span>首页</span>
@@ -14,12 +13,12 @@
       to="/hot"
       class="link flex column">
       <i class="icon"></i>
-      <span>关注</span>
+      <span>热门</span>
     </router-link>    
   </div>
-  <div class="find">
+  <div class="discover">
     <router-link
-      to="/find"
+      to="/discover"
       class="link flex column">
       <i class="icon"></i>
       <span>发现</span>
@@ -50,7 +49,9 @@ export default {
   position fixed
   bottom 0
   width 100%
+  max-width 750px
   height 4.5rem
+  background #ffffff
   border-top 1px solid #dcdcdc
   .link
     height 3.5rem
@@ -80,13 +81,13 @@ export default {
       .icon
         background url('~@/common/icon/icon-hot-active.png')no-repeat center
         background-size 100% 100%
-  .find
+  .discover
     .icon
-      background url('~@/common/icon/icon-find-default.png')no-repeat center
+      background url('~@/common/icon/icon-discover-default.png')no-repeat center
       background-size 100% 100%
     .router-link-active
       .icon
-        background url('~@/common/icon/icon-find-active.png')no-repeat center
+        background url('~@/common/icon/icon-discover-active.png')no-repeat center
         background-size 100% 100%
   .mine
     .icon

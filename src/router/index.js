@@ -5,6 +5,9 @@ const Recommend = () => import("@/views/Recommend");
 const Sociology = () => import("@/views/Sociology");
 const Science = () => import("@/views/Science");
 const Sports = () => import("@/views/Sports");
+const Hot = () => import("@/views/Hot");
+const Discover = () => import("@/views/Discover");
+const Mine = () => import("@/views/Mine");
 
 Vue.use(Router);
 
@@ -12,8 +15,11 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      redirect: '/home'
+    },
+    {
+      path: "/home",
       component: Home,
       children: [
         {
@@ -37,6 +43,21 @@ export default new Router({
           component: Sports
         }
       ]
+    },
+    {
+      path: "/hot",
+      name: "Hot",
+      component: Hot
+    },
+    {
+      path: "/discover",
+      name: "Discover",
+      component: Discover
+    },
+    {
+      path: "/mine",
+      name: "Mine",
+      component: Mine
     }
   ]
 });

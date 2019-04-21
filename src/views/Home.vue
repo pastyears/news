@@ -2,7 +2,8 @@
   <div class="home">
     <VSearch />
     <VMenu />
-    <router-view />
+    <router-view
+      class="view"/>
     <VFooter />
   </div>
 </template>
@@ -21,7 +22,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-h2
-  color red
-  font-size 2rem
+.view
+  padding-bottom 5rem
 </style>
