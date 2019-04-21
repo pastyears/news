@@ -1,17 +1,28 @@
 <template>
   <div class="hot">
-    热门推荐
-    <VFooter />
+    <Header title="热门"/>
+    <div class="content">
+      <Article
+        v-for="(item,index) in 10"
+        :key="index"
+        class="article"/>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 "use strict";
-import VFooter from "@/components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Article from "@/components/Article";
+
 export default {
   name: "Hot",
   components: {
-    VFooter
+    Header,
+    Footer,
+    Article
   }
 };
 </script>

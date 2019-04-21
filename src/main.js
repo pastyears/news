@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import '@/common/stylus/reset.styl';
 import '@/common/stylus/layout.styl';
+import '@/common/stylus/common.styl';
 Vue.config.productionTip = false;
 
 new Vue({

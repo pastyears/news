@@ -1,21 +1,29 @@
 <template>
   <div class="discover">
-    发现了一个吃糖的乌龟
-    <VFooter />
+    <Header title="发现"/>
+    <div class="content flex items-center content-center">
+      <h2>发现了一个吃糖的乌龟</h2>
+      <h2>或者一个日晒三杆的猪</h2>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 "use strict";
-import VFooter from "@/components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 export default {
   name: "Discover",
   components: {
-    VFooter
+    Footer,
+    Header
   }
 };
 </script>
 
 <style scoped lang="stylus">
-
+.content
+  color red
+  font-size 2.4rem
 </style>

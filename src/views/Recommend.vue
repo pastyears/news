@@ -2,7 +2,7 @@
   <div class="recommend">
     <Banner class="banner"/>
     <Article
-      v-for="item,index in 10"
+      v-for="(item,index) in 10"
       :key="index"
       class="article"/>
   </div>
@@ -23,12 +23,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.recommend
-  // padding 0 2rem
-  .banner
-    margin 0 2rem
-    margin-top 2rem
-  .article
-    &:nth-child(n+1)
-      border-top 1px solid #ecebeb
+.article
+  &:nth-child(n+1)
+    border-top 1px solid #ecebeb
 </style>
