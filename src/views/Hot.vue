@@ -3,7 +3,7 @@
     <Header title="热门"/>
     <div class="content">
       <Article
-        v-for="(item,index) in 10"
+        v-for="(item,index) in 20"
         :key="index"
         class="article"/>
     </div>
@@ -28,5 +28,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-
+.content
+  overflow auto
 </style>

@@ -36,6 +36,7 @@ export default {
   width 100%
   max-width 750px
   height 4.5rem
+  background #ffffff
   border-bottom 1px solid #dcdcdc
   .back
     width 10rem

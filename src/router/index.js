@@ -8,6 +8,7 @@ const Sports = () => import("@/views/Sports");
 const Hot = () => import("@/views/Hot");
 const Discover = () => import("@/views/Discover");
 const Mine = () => import("@/views/Mine");
+const Login = () => import("@/views/Login");
 
 Vue.use(Router);
 
@@ -58,6 +59,11 @@ export default new Router({
       path: "/mine",
       name: "Mine",
       component: Mine
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: Login
     }
   ]
 });
