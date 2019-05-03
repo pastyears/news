@@ -1,21 +1,33 @@
 <template>
   <div class="discover">
-    发现了一个吃糖的乌龟
-    <VFooter />
+    <Header title="发现"/>
+    <div class="content">
+      <Article
+        v-for="(item,index) in 20"
+        :key="index"
+        class="article"/>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 "use strict";
-import VFooter from "@/components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Article from "@/components/Article";
+
 export default {
   name: "Discover",
   components: {
-    VFooter
+    Footer,
+    Header,
+    Article
   }
 };
 </script>
 
 <style scoped lang="stylus">
-
+.content
+  overflow auto
 </style>

@@ -2,8 +2,11 @@
   <div class="recommend">
     <Banner class="banner"/>
     <Article
-      v-for="item,index in 10"
+      v-for="(item,index) in newsList"
       :key="index"
+      :src="item.News_images"
+      :title="item.News_title"
+      :count="item.News_count"
       class="article"/>
   </div>
 </template>
@@ -12,9 +15,11 @@
 "use strict";
 import Banner from "@/components/Banner";
 import Article from "@/components/Article";
+import GetList from "@/mixins/getList";
 
 export default {
   name: "Recommend",
+  mixins: [GetList],
   components: {
     Banner,
     Article
@@ -23,12 +28,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.recommend
-  // padding 0 2rem
-  .banner
-    margin 0 2rem
-    margin-top 2rem
-  .article
-    &:nth-child(n+1)
-      border-top 1px solid #ecebeb
+.article
+  &:nth-child(n+1)
+    border-top 1px solid #ecebeb
 </style>

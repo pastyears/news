@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <VSearch />
-    <VMenu />
-    <router-view
-      class="view"/>
+    <header class="header">
+      <VSearch />
+      <VMenu />
+    </header>
+    <router-view class="view"/>
     <VFooter />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import VSearch from "@/components/Search";
 import VMenu from "@/components/Menu";
 import VFooter from "@/components/Footer";
+import axios from "axios"
 export default {
   name: "home",
   components: {
@@ -22,6 +24,17 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+.header
+  position fixed
+  top 0
+  z-index 10
+  width 100%
+  max-width 750px;
+  height 10rem
+  background #ffffff
 .view
-  padding-bottom 5rem
+  position absolute
+  top 10rem
+  bottom 4rem
+  background #ffffff
 </style>

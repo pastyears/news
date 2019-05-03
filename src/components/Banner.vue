@@ -14,6 +14,8 @@ export default {
 
 <style scoped lang="stylus">
 .banner
+  margin 2rem 2rem 0 2rem
+  margin-top 2rem
   box-sizing border-box
   overflow 12rem
   .img_wrap

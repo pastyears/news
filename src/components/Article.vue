@@ -4,15 +4,15 @@
   tag="div"
   class="article flex content-between">
   <div class="left flex">
-    <img src="~@/common/images/Bitmap.png" alt="" class="img">
+    <img :src="src" :alt="alt" class="img">
   </div>
   <div class="right flex-a flex column content-between">
-    <em class="title">为什么程序员用的都是Mac？</em>
+    <em class="title">{{title}}</em>
     <div class="bottom flex content-between">
       <div class="answer">问答</div>
       <div class="comment flex items-center">
         <i class="icon"></i>
-        <p>45</p>
+        <p>{{count}}</p>
       </div>
     </div>
   </div>
@@ -23,7 +23,12 @@
 "use strict";
 export default {
   name: "Article",
-  components: {}
+  props: {
+    src: {type: String, default: ""},
+    alt: {type: String, default: "图片"},
+    title: {type: String, default: "为什么程序员用的都是Mac？"},
+    count: {type: [String, Number], default: 0},
+  }
 };
 </script>
 

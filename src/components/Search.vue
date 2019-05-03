@@ -16,6 +16,7 @@ export default {
 
 <style scoped lang="stylus">
 .search
+  box-sizing border-box
   position relative
   padding 0 2.2rem
   height 5rem
