@@ -17,7 +17,6 @@
           type="password"
           :src="require('@/common/icon/signin_password_normal_2@3x.png')"
           class="input"/>
-<<<<<<< HEAD
         <div class="tip">{{tip}}</div>
         <button
           @click="login"
@@ -35,12 +34,6 @@
             class="other">
             注册账号
           </router-link>
-=======
-        <button class="btn">登录</button>
-        <div class="btns flex content-between">
-          <button class="other">忘记密码</button>
-          <button class="other">注册账号</button>
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
         </div>
       </div>
     </div>
@@ -57,7 +50,6 @@ export default {
     Header,
     Input
   },
-<<<<<<< HEAD
   data () {
     return {
       username: "",
@@ -93,14 +85,6 @@ export default {
         }
         this.tip = msg;
       })
-=======
-  methods: {
-    getUserName (value) {
-      console.log('用户名', value)
-    },
-    getPassword (value) {
-      console.log('获取密码', value)
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     }
   }
 };
@@ -110,11 +94,7 @@ export default {
 .header
   position relative
 .main
-<<<<<<< HEAD
   margin-top 2rem
-=======
-  margin-top 5rem
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
   .background
     margin 0 8rem
     .img
@@ -127,15 +107,12 @@ export default {
     width 100%
     .input
       margin-top 3rem
-<<<<<<< HEAD
     .tip
       height 1.6rem
       line-height 1.6rem
       color #ff859c
       text-align right
       font-size 1.2rem
-=======
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     .btn
       margin-top 3rem
       width 100%

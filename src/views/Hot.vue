@@ -3,11 +3,7 @@
     <Header title="热门"/>
     <div class="content">
       <Article
-<<<<<<< HEAD
         v-for="(item,index) in newsList"
-=======
-        v-for="(item,index) in 20"
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
         :key="index"
         class="article"/>
     </div>
@@ -27,7 +23,6 @@ export default {
     Header,
     Footer,
     Article
-<<<<<<< HEAD
   },
   data () {
     return {
@@ -48,18 +43,13 @@ export default {
         }
       })
     }
-=======
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
   }
 };
 </script>
 
 <style scoped lang="stylus">
 .content
-<<<<<<< HEAD
   box-sizing border-box
   padding-top 4.5rem
-=======
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
   overflow auto
 </style>

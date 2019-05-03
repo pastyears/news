@@ -26,7 +26,7 @@
   </div>
   <div class="mine">
     <router-link
-      to="/login"
+      to="/mine"
       class="link flex column">
       <i class="icon"></i>
       <span>我的</span>

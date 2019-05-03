@@ -9,11 +9,8 @@ const Hot = () => import("@/views/Hot");
 const Discover = () => import("@/views/Discover");
 const Mine = () => import("@/views/Mine");
 const Login = () => import("@/views/Login");
-<<<<<<< HEAD
 const Register = () => import("@/views/Register");
 const Forget = () => import("@/views/Forget");
-=======
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
 
 Vue.use(Router);
 
@@ -85,20 +82,15 @@ const router = new Router({
     {
       path: "/mine",
       name: "Mine",
-<<<<<<< HEAD
       component: Mine,
       meta: {
         login: true
       }
-=======
-      component: Mine
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     },
     {
       path: "/login",
       name: "Login",
       component: Login
-<<<<<<< HEAD
     },
     {
       path: "/register",
@@ -109,8 +101,6 @@ const router = new Router({
       path: "/forget",
       name: "Forget",
       component: Forget
-=======
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     }
   ]
 });

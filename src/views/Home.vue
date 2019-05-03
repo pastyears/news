@@ -4,12 +4,7 @@
       <VSearch />
       <VMenu />
     </header>
-<<<<<<< HEAD
     <router-view class="view"/>
-=======
-    <router-view
-      class="view"/>
->>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     <VFooter />
   </div>
 </template>
