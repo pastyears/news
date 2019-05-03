@@ -2,7 +2,11 @@
   <div class="recommend">
     <Banner class="banner"/>
     <Article
+<<<<<<< HEAD
       v-for="(item,index) in newsList"
+=======
+      v-for="(item,index) in 10"
+>>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
       :key="index"
       :src="item.News_images"
       :title="item.News_title"

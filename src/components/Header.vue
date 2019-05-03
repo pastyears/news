@@ -6,8 +6,13 @@
       <i class="icon"></i>
       <span>返回</span>
     </div>
+<<<<<<< HEAD
     <div class="title flex-a">
       {{title}}
+=======
+    <div class="title flex-a flex items-center content-center">
+      <em>{{title}}</em>
+>>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
     </div>
   </header>
 </template>
@@ -50,9 +55,12 @@ export default {
   .title
     margin-right 10rem
     font-size 2rem
+<<<<<<< HEAD
     line-height 4.5rem
     text-align center
     overflow hidden
     text-overflow ellipsis
     white-space nowrap
+=======
+>>>>>>> c1406a78b6db8339d710939c0a8f1f6ca51c994d
 </style>
