@@ -8,6 +8,7 @@ import utils from "./lib/utils";
 
 import "@/common/stylus/reset.styl";
 import "@/common/stylus/layout.styl";
+import "@/common/stylus/editor.styl";
 
 // import "@/common/stylus/common.styl";
 

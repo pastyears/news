@@ -16,7 +16,8 @@ const Detail = () => import("@/views/Detail");
 Vue.use(Router);
 
 const router = new Router({
-  mode: "history",
+  // mode: "history",
+  mode: "hash",
   scrollBehavior (to,from,savePosition) {
     if(savePosition){
       return savePosition;
