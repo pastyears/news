@@ -1,6 +1,6 @@
 <template>
   <div class="discover">
-    <Header title="发现"/>
+    <Header title="收藏"/>
     <div class="content">
       <Article
         v-for="(item,index) in 20"
@@ -18,7 +18,7 @@ import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
 export default {
-  name: "Discover",
+  name: "Collection",
   components: {
     Footer,
     Header,
@@ -29,5 +29,7 @@ export default {
 
 <style scoped lang="stylus">
 .content
+  box-sizing border-box
+  padding-top 4.5rem
   overflow auto
 </style>

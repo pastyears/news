@@ -1,6 +1,9 @@
 <template>
 <router-link
-  to="/"
+  :to="{
+    path: '/detail',
+    query: { cate: cate, name: content }
+  }"
   tag="div"
   class="article flex content-between">
   <div class="left flex">
@@ -26,7 +29,9 @@ export default {
   props: {
     src: {type: String, default: ""},
     alt: {type: String, default: "图片"},
-    title: {type: String, default: "为什么程序员用的都是Mac？"},
+    title: {type: String, default: ""},
+    content: {type: String, default: ""},
+    cate: {type: String, default: ""},
     count: {type: [String, Number], default: 0},
   }
 };

@@ -6,11 +6,12 @@ const Sociology = () => import("@/views/Sociology");
 const Science = () => import("@/views/Science");
 const Sports = () => import("@/views/Sports");
 const Hot = () => import("@/views/Hot");
-const Discover = () => import("@/views/Discover");
+const Collection = () => import("@/views/Collection");
 const Mine = () => import("@/views/Mine");
 const Login = () => import("@/views/Login");
 const Register = () => import("@/views/Register");
 const Forget = () => import("@/views/Forget");
+const Detail = () => import("@/views/Detail");
 
 Vue.use(Router);
 
@@ -75,9 +76,12 @@ const router = new Router({
       }
     },
     {
-      path: "/discover",
-      name: "Discover",
-      component: Discover
+      path: "/collection",
+      name: "Collection",
+      component: Collection,
+      meta: {
+        login: true
+      }
     },
     {
       path: "/mine",
@@ -101,6 +105,11 @@ const router = new Router({
       path: "/forget",
       name: "Forget",
       component: Forget
+    },
+    {
+      path: "/detail",
+      name: "Detail",
+      component: Detail
     }
   ]
 });

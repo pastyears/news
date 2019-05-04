@@ -7,6 +7,8 @@
       :src="item.News_images"
       :title="item.News_title"
       :count="item.News_count"
+      :content="item.News_content"
+      :cate="item.News_style"
       class="article"/>
   </div>
 </template>

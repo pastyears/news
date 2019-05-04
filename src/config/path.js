@@ -10,6 +10,10 @@ const path = {
   list: {
     method: "get",
     url: "/api/list"
+  },
+  detail: {
+    method: "post",
+    url: "/api/detail"
   }
 }
 

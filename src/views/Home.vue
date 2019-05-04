@@ -12,7 +12,6 @@
 import VSearch from "@/components/Search";
 import VMenu from "@/components/Menu";
 import VFooter from "@/components/Footer";
-import axios from "axios"
 export default {
   name: "home",
   components: {
@@ -37,4 +36,5 @@ export default {
   top 10rem
   bottom 4rem
   background #ffffff
+  overflow auto
 </style>

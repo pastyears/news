@@ -18,10 +18,10 @@
   </div>
   <div class="discover">
     <router-link
-      to="/discover"
+      to="/collection"
       class="link flex column">
       <i class="icon"></i>
-      <span>发现</span>
+      <span>收藏</span>
     </router-link>    
   </div>
   <div class="mine">
