@@ -26,13 +26,14 @@ export default {
 .header
   position fixed
   top 0
+  left auto
   z-index 10
   width 100%
   max-width 750px;
   height 10rem
   background #ffffff
 .view
-  position absolute
+  position fixed
   top 10rem
   bottom 4rem
   background #ffffff

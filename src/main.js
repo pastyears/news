@@ -10,13 +10,15 @@ import "@/common/stylus/reset.styl";
 import "@/common/stylus/layout.styl";
 import "@/common/stylus/editor.styl";
 
-// import "@/common/stylus/common.styl";
+import { InfiniteScroll } from 'mint-ui';
+
 
 Vue.config.productionTip = false;
 
 Vue.use(api);
 Vue.use(path);
 Vue.use(utils);
+Vue.use(InfiniteScroll);
 
 new Vue({
   router,

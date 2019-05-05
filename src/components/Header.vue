@@ -32,6 +32,7 @@ export default {
   box-sizing border-box
   position fixed
   top 0
+  left auto
   padding 0 1rem
   width 100%
   max-width 750px

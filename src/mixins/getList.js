@@ -2,35 +2,34 @@ export default {
   data () {
     return {
       bannerList: [],
-      newsList: []
+      newsList: [],
+      page: 1,
+      size: 10
     }
   },
   created () {
-    this.getInfo()
+    this.getBannerInfo()
   },
   methods: {
-    getInfo () {
-      this.$http([this.getBannerInfo(), this.getList()])
-      .then(result => {
-        this.bannerList = result[0]
-        this.newsList = result[1]
-      })
-    },
     getBannerInfo () {
       const config = this.$path.get_banner
       return this.$http(config).then((data) => {
-        return data;
+        this.bannerList = data
       })
     },
     getList () {
       const config = this.$path.list;
-      config.params = { cate: this.$route.meta.cate };
-      return this.$http(config).then((result) => {
+      config.params = {
+        cate: this.$route.meta.cate,
+        size: this.size,
+        page: this.page
+      };
+      this.$http(config).then((result) => {
         const {code, data} = result;
         if (code === "0") {
-          return data;
+          this.newsList = [...this.newsList, ...data]
+          this.page++
         }
-        return result;
       })
     }
   }
