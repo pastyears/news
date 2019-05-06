@@ -1,5 +1,5 @@
 <template>
-  <header class="header flex">
+  <div class="header flex">
     <div
       @click="goBack"
       class="back flex items-center">
@@ -9,7 +9,7 @@
     <div class="title flex-a">
       {{title}}
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -30,9 +30,6 @@ export default {
 <style scoped lang="stylus">
 .header
   box-sizing border-box
-  position fixed
-  top 0
-  left auto
   padding 0 1rem
   width 100%
   max-width 750px

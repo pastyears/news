@@ -12,6 +12,7 @@ const Login = () => import("@/views/Login");
 const Register = () => import("@/views/Register");
 const Forget = () => import("@/views/Forget");
 const Detail = () => import("@/views/Detail");
+const Search = () => import("@/views/Search");
 
 Vue.use(Router);
 
@@ -111,6 +112,11 @@ const router = new Router({
       path: "/detail",
       name: "Detail",
       component: Detail
+    },
+    {
+      path: "/search",
+      name: "Search",
+      component: Search
     }
   ]
 });

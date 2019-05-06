@@ -40,6 +40,7 @@ export default {
 <style scoped lang="stylus">
 .content
   box-sizing border-box
+  margin 0 13px
   padding-top 4.5rem
   overflow auto
   font-size 160%

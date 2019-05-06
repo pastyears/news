@@ -7,16 +7,7 @@ export default {
       size: 10
     }
   },
-  created () {
-    this.getBannerInfo()
-  },
   methods: {
-    getBannerInfo () {
-      const config = this.$path.get_banner
-      return this.$http(config).then((data) => {
-        this.bannerList = data
-      })
-    },
     getList () {
       const config = this.$path.list;
       config.params = {

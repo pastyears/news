@@ -1,21 +1,22 @@
 <template>
-  <div class="recommend">
-    <Banner class="banner"/>
-    <Article
-      v-for="(item,index) in newsList"
-      :key="index"
-      :src="item.News_images"
-      :title="item.News_title"
-      :count="item.News_count"
-      :content="item.News_content"
-      :cate="item.News_style"
-      class="article"/>
-  </div>
+<div
+  v-infinite-scroll="getList"
+  infinite-scroll-disabled="loading"
+  infinite-scroll-distance="1">
+  <Article
+    v-for="(item,index) in newsList"
+    :key="index"
+    :src="item.News_images"
+    :title="item.News_title"
+    :count="item.News_count"
+    :content="item.News_content"
+    :cate="item.News_style"
+    class="article"/>
+</div>
 </template>
 
 <script>
 "use strict";
-import Banner from "@/components/Banner";
 import Article from "@/components/Article";
 import GetList from "@/mixins/getList";
 
@@ -23,7 +24,6 @@ export default {
   name: "Sociology",
   mixins: [GetList],
   components: {
-    Banner,
     Article
   }
 };

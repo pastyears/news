@@ -1,7 +1,9 @@
 <template>
-  <div class="mine">
+  <div class="mine flex column">
     <Header title="我的"/>
-    是我的，还是我的
+    <div class="content flex-a">
+      是我的，还是我的
+    </div>
     <VFooter />
   </div>
 </template>
@@ -20,5 +22,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-
+.mine
+  height 100vh
 </style>

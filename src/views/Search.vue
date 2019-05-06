@@ -1,6 +1,6 @@
 <template>
-  <div class="hot flex column">
-    <Header title="热门"/>
+  <div class="search flex column">
+    <Header title="搜索"/>
     <div class="content flex-a">
       <Article
         v-for="(item,index) in newsList"
@@ -12,7 +12,6 @@
         :cate="item.News_style"
         class="article"/>
     </div>
-    <Footer />
   </div>
 </template>
 
@@ -23,7 +22,7 @@ import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
 export default {
-  name: "Hot",
+  name: "Search",
   components: {
     Header,
     Footer,
@@ -31,9 +30,7 @@ export default {
   },
   data () {
     return {
-      newsList: [] ,
-      page: 1,
-      size: 10
+      newsList: []
     }
   },
   created () {
@@ -41,13 +38,9 @@ export default {
   },
   methods: {
     getList () {
-      const config = this.$path.list;
-      config.params = {
-        cate: this.$route.meta.cate,
-        size: this.size,
-        page: this.page
-      };
-      return this.$http(config).then((result) => {
+      const config = this.$path.search;
+      config.params = {content: this.$route.query.content};
+      this.$http(config).then((result) => {
         const {code, data} = result;
         if (code === "0") {
           this.newsList = data;
@@ -59,10 +52,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.hot
-  position relative
+.search
   height 100vh
-.content
-  box-sizing border-box
-  overflow auto
 </style>

@@ -30,6 +30,5 @@ export default {
 <style scoped lang="stylus">
 .content
   box-sizing border-box
-  padding-top 4.5rem
   overflow auto
 </style>

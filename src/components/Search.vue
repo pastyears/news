@@ -1,8 +1,11 @@
 <template>
   <aside class="search flex items-center content-between">
     <em class="title">发现</em>
-    <input type="text" class="input flex-a" />
-    <button class="icon"></button>
+    <input v-model="content" type="text" class="input flex-a" />
+    <button
+      @click="search"
+      class="icon">
+    </button>
   </aside>
 </template>
 
@@ -10,7 +13,21 @@
 "use strict";
 export default {
   name: "Search",
-  components: {}
+  data () {
+    return {
+      content: ''
+    }
+  },
+  methods: {
+    search () {
+      this.$router.push({
+        path: '/search',
+        query: {
+          content: this.content
+        }
+      })
+    }
+  }
 };
 </script>
 

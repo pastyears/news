@@ -1,41 +1,52 @@
 <template>
-  <div class="home">
-    <header class="header">
+  <div class="home flex column">
+    <div class="header">
       <VSearch />
       <VMenu />
-    </header>
-    <router-view class="view"/>
+    </div>
+    <Banner class="banner"/>
+    <router-view class="view flex-a"/>
     <VFooter />
   </div>
 </template>
 <script>
 import VSearch from "@/components/Search";
 import VMenu from "@/components/Menu";
+import Banner from "@/components/Banner";
 import VFooter from "@/components/Footer";
 export default {
   name: "home",
   components: {
     VSearch,
     VMenu,
+    Banner,
     VFooter
+  },
+  data () {
+    return {
+      bannerList: []
+    }
+  },
+  created () {
+    this.getBannerInfo()
+  },
+  methods: {
+    getBannerInfo () {
+      const config = this.$path.get_banner
+      return this.$http(config).then((data) => {
+        this.bannerList = data
+      })
+    }
   }
 };
 </script>
 
 <style scoped lang="stylus">
-.header
-  position fixed
-  top 0
-  left auto
-  z-index 10
-  width 100%
-  max-width 750px;
-  height 10rem
-  background #ffffff
+.home
+  position relative
+  height 100vh
+  overflow hidden
 .view
-  position fixed
-  top 10rem
-  bottom 4rem
   background #ffffff
   overflow auto
 </style>

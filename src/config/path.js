@@ -14,6 +14,10 @@ const path = {
   detail: {
     method: "post",
     url: "/api/detail"
+  },
+  search: {
+    method: "get",
+    url: "/api/search"
   }
 }
 

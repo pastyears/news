@@ -46,8 +46,6 @@ export default {
 <style scoped lang="stylus">
 .footer
   box-sizing border-box
-  position fixed
-  bottom 0
   width 100%
   max-width 750px
   height 4.5rem
