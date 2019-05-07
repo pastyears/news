@@ -1,25 +1,31 @@
 <template>
-  <div class="banner flex">
-    <img class="img flex-a" src="~@/common/images/banner1.jpg" alt="banner1">
-  </div>
+  <Swipe class="banner">
+    <SwipeItem class="item">
+      <img src="~@/common/images/banner1.jpg" alt="">
+    </SwipeItem>
+    <SwipeItem class="item">
+      <img src="~@/common/images/banner2.jpg" alt="">
+    </SwipeItem>
+    <SwipeItem class="item">
+      <img src="~@/common/images/timg.jpg" alt="">
+    </SwipeItem>
+  </Swipe>
 </template>
 
 <script>
 "use strict";
+import { Swipe, SwipeItem } from 'mint-ui';
 export default {
   name: "Banner",
-  components: {}
+  components: {
+    Swipe,
+    SwipeItem,
+  }
 };
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus">
+
 .banner
-  box-sizing border-box
-  margin 2rem
-  overflow 12rem
-  .img_wrap
-    box-sizing border-box
-  .img
-    width 100%
-    height 100%
+  height 14.5rem
 </style>

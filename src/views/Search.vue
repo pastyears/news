@@ -18,14 +18,12 @@
 <script>
 "use strict";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Article from "@/components/Article";
 
 export default {
   name: "Search",
   components: {
     Header,
-    Footer,
     Article
   },
   data () {

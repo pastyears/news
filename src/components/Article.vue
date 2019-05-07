@@ -2,7 +2,7 @@
 <router-link
   :to="{
     path: '/detail',
-    query: { cate: cate, name: content }
+    query: { cate: cate, name: content,id:id }
   }"
   tag="div"
   class="article flex content-between">
@@ -33,6 +33,7 @@ export default {
     content: {type: String, default: ""},
     cate: {type: String, default: ""},
     count: {type: [String, Number], default: 0},
+    id: {type: [String, Number], default: 0}
   }
 };
 </script>

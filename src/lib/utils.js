@@ -4,7 +4,10 @@ const local = {
   },
   fetch (key) {
     return JSON.parse(localStorage.getItem(key)) || {}
-  }
+  },
+  remove (key) {
+    localStorage.removeItem(key)
+  } 
 }
 
 const session = {
@@ -13,7 +16,10 @@ const session = {
   },
   fetch (key) {
     return JSON.parse(sessionStorage.getItem(key)) || {}
-  }
+  },
+  remove (key) {
+    sessionStorage.removeItem(key)
+  } 
 }
 
 export default {

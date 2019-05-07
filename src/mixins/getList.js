@@ -4,7 +4,7 @@ export default {
       bannerList: [],
       newsList: [],
       page: 1,
-      size: 10
+      size:10
     }
   },
   methods: {

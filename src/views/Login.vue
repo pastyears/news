@@ -71,6 +71,7 @@ export default {
         username: this.username,
         password: this.password
       }
+      console.log(this.$route.query.redirect);
       this.$http(config).then((res) => {
         const {code, data, msg} = res
         if (code === "0") {

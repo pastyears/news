@@ -1,10 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
 import api from "./api";
 import path from "./config/path";
 import utils from "./lib/utils";
+import 'mint-ui/lib/style.css';
 
 import "@/common/stylus/reset.styl";
 import "@/common/stylus/layout.styl";
@@ -22,6 +22,5 @@ Vue.use(InfiniteScroll);
 
 new Vue({
   router,
-  store,
   render: h => h(App)
 }).$mount("#app");

@@ -11,6 +11,7 @@
     :count="item.News_count"
     :content="item.News_content"
     :cate="item.News_style"
+    :id="item.News_id"
     class="article"/>
 </div>
 </template>

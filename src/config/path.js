@@ -18,7 +18,27 @@ const path = {
   search: {
     method: "get",
     url: "/api/search"
-  }
+  },
+  register:{
+    method: "get",
+    url: "/api/register"
+  },
+  collect:{
+    method: "get",
+    url: "/api/collect"
+  },
+  addCollect:{
+    method: "get",
+    url: "/api/addcollect"
+  },
+  isCollect:{
+    method: "get",
+    url: "/api/iscollect"
+  },
+  deleteCollect:{
+    method: "get",
+    url: "/api/deletecollect"
+  },
 }
 
 export default {

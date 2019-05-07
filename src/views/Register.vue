@@ -89,6 +89,20 @@ export default {
       if (this.password && (this.password != this.rePassword)) {
         this.tip="两次密码输入不一致";
       }
+      const config = this.$path.register;
+      this.tip = "修改中...";
+      config.params = {
+        username: this.username,
+        password: this.password
+      };
+      this.$http(config).then(res => {
+        const { code, data, msg } = res;
+        if (code === "0" && data[0]) {
+          // 跳转登录
+          this.$router.back()
+        }
+        this.tip = msg;
+      });
     }
   }
 };
