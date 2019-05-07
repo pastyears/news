@@ -1,6 +1,9 @@
 <template>
   <div class="detail">
-    <Header title="详情"/>
+    <Header
+      title="详情"
+      :tip="Collect"
+      @handle="addCollect"/>
     <div
       v-html="detail"
       class="content">

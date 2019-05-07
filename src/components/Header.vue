@@ -9,6 +9,11 @@
     <div class="title flex-a">
       {{title}}
     </div>
+    <div
+      @click="$emit('handle')"
+      class="right flex">
+      {{tip}}
+    </div>
   </div>
 </template>
 
@@ -17,7 +22,8 @@
 export default {
   name: "Header",
   props: {
-    title: {type: String, default: ''}
+    title: {type: String, default: ''},
+    tip: {type: String, default: '莹莹的收藏'}
   },
   methods: {
     goBack () {
@@ -46,11 +52,14 @@ export default {
       background url("~@/common/icon/icon-left.png")no-repeat center
       background-size 2.5rem 2.5rem
   .title
-    margin-right 10rem
+    // margin-right 10rem
     font-size 2rem
     line-height 4.5rem
     text-align center
     overflow hidden
     text-overflow ellipsis
     white-space nowrap
+  .right
+    width 10rem
+    text-align right
 </style>
